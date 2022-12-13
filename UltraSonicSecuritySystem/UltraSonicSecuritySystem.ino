@@ -6,12 +6,12 @@
  * Recource: https://create.arduino.cc/projecthub/Krepak/ultrasonic-security-system-3afe13?ref=search&ref_id=red%20green%20yellow%20light%20echo%20sensor&offset=1
  */
 
-int trigPin = 2;
-int echoPin = 3;
-int LEDlampRed = 4;
-int LEDlampYellow = 5;
-int LEDlampGreen = 6;
-int soundbuzzer = 7;
+int trigPin = 7;
+int echoPin = 6;
+int LEDlampRed = 9;
+int LEDlampYellow = 10;
+int LEDlampGreen = 11;
+int soundbuzzer = 1;
 int sound = 500;
 
 
@@ -62,7 +62,7 @@ void loop() {
   else {
     Serial.print(distanceincm);
     Serial.println(" cm");
-    tone(buzzer, sound);
+    tone(soundbuzzer, sound);
   }
   
   delay(300);
